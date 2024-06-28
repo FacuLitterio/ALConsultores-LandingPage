@@ -7,13 +7,12 @@ import {
   responsiveFontSizes,
 } from "@mui/material";
 import WhatsAppSpeedDial from "common/components/WhatsAppSpeedDial";
-import CertificacionesSection from "components/CertificacionesSection";
 import ContactoSection from "components/ContactoSection";
+import EstadisticsSection from "components/EstadisticsSection";
 import FAQSection from "components/FAQSection";
 import FooterSection from "components/FooterSection";
-import InvestSection from "components/InvestSection";
+import InversionesTiempoRealSection from "components/InversionesTiempoReal";
 import MainSection from "components/MainSection";
-import MediosPagoSection from "components/MediosPagoSection";
 import ServiciosSection from "components/ServiciosSection";
 import TestimoniosSection from "components/TestimoniosSection";
 import TransaccionesSection from "components/TransaccionesSection";
@@ -53,14 +52,13 @@ const App = () => {
         >
           <AppBar />
           <MainSection />
-          <MediosPagoSection />
+          <EstadisticsSection />
           <ServiciosSection />
-          <InvestSection />
+          <InversionesTiempoRealSection />
           <TransaccionesSection />
           <FAQSection />
           <TestimoniosSection />
           <ContactoSection />
-          <CertificacionesSection />
           <FooterSection />
           <WhatsAppSpeedDial />
         </Box>

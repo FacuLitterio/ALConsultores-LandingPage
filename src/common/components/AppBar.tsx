@@ -1,6 +1,5 @@
 import LoginIcon from "@mui/icons-material/Login";
 import {
-  Avatar,
   Box,
   Button,
   LinearProgress,
@@ -10,16 +9,14 @@ import {
   Typography,
 } from "@mui/material";
 import { DEFAULT_ELEVATION } from "common/constants";
-import { PANDAPAY_APP_URL } from "constants";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
-import PandaPayIcon from "../assets/PandaPay_Logo.png";
 
 const pages = [
   { id: 1, label: "Inicio" },
   { id: 2, label: "Servicios" },
   { id: 3, label: "Invierte" },
-  { id: 4, label: "Testimonios" },
+  { id: 4, label: "Crypto" },
   { id: 5, label: "Contacto" },
 ];
 
@@ -28,9 +25,7 @@ const AnimatedBox = motion(Box);
 const AppBar = () => {
   const [activeSection, setActiveSection] = useState("");
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
-  const handleClickIniciarSesion = useCallback(() => {
-    window.location.href = PANDAPAY_APP_URL;
-  }, []);
+  const handleClickIniciarSesion = useCallback(() => {}, []);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -115,17 +110,13 @@ const AppBar = () => {
             sx={{ cursor: "pointer" }}
             onClick={() => handleScrollToSection("Inicio")}
           >
-            <Avatar src={PandaPayIcon} sx={{ height: 45, width: 45 }} />
-            <Typography variant="h6" fontWeight="bold" component="span">
-              Panda
-              <Typography
-                variant="h6"
-                component="span"
-                fontWeight="bold"
-                color="primary.main"
-              >
-                Pay
-              </Typography>
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              component="span"
+              color="text.primary"
+            >
+              AL Consultores
             </Typography>
           </Stack>
           <Box sx={{ flexGrow: 1 }} />
@@ -159,7 +150,7 @@ const AppBar = () => {
                       left: 0,
                       right: 0,
                       height: "3px",
-                      backgroundColor: "#8CC90A",
+                      backgroundColor: (theme) => theme.palette.primary.main,
                       transformOrigin: "center",
                     }}
                     variants={variants}
@@ -173,7 +164,7 @@ const AppBar = () => {
             </Stack>
           </Box>
 
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={1}>
             <Button
               color="primary"
               variant="outlined"
@@ -181,6 +172,9 @@ const AppBar = () => {
               onClick={handleClickIniciarSesion}
             >
               Ingresar
+            </Button>
+            <Button variant="contained" color="primary">
+              Registrarme
             </Button>
           </Stack>
         </Toolbar>

@@ -3,21 +3,19 @@ import { grey } from "@mui/material/colors";
 
 const commonTokens = () => ({
   primary: {
-    main: "#8CC90A",
+    main: "#2B5F60",
+    light: "#E0ECEC",
   },
 });
 
 const getTheme = (mode: PaletteMode): ThemeOptions => {
   return {
-    typography: {
-      fontFamily: '"Oswald", sans-serif',
-    },
     components: {
       MuiButton: {
         defaultProps: {
           sx: {
             textTransform: "none",
-            color: "text.primary",
+            borderRadius: 20,
           },
           disableElevation: true,
         },

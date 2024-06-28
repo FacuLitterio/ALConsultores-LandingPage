@@ -10,7 +10,7 @@ const Section: React.FC<SectionProps> = ({ children, ...rest }) => {
       sx={{
         width: 1,
         p: 3,
-        my: { xs: 5, sm: 8, md: 10, xl: 16 },
+        my: { xs: 5, sm: 8, xl: 12 },
       }}
       {...rest}
     >

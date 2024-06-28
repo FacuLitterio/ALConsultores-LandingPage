@@ -1,7 +1,7 @@
-import AccountBalanceOutlinedIcon from "@mui/icons-material/AccountBalanceOutlined";
-import CreditScoreOutlinedIcon from "@mui/icons-material/CreditScoreOutlined";
-import CurrencyExchangeOutlinedIcon from "@mui/icons-material/CurrencyExchangeOutlined";
-import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
+import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
+import HistoryOutlinedIcon from "@mui/icons-material/HistoryOutlined";
+import LocalFireDepartmentOutlinedIcon from "@mui/icons-material/LocalFireDepartmentOutlined";
+import SpaOutlinedIcon from "@mui/icons-material/SpaOutlined";
 import {
   Avatar,
   Grid,
@@ -14,9 +14,10 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import DevicePaymentImage from "common/assets/Servicios/ServiciosMainImage.jpeg";
+import ServiciosImage from "common/assets/Servicios/ServiciosImage.png";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
+import CustomChip from "common/components/Chip";
 import ImageContainer from "common/components/ImageContainer";
 import Section from "common/components/Section";
 import { DEFAULT_SPACING } from "common/constants";
@@ -25,31 +26,31 @@ import { motion } from "framer-motion";
 const SERVICIOS = [
   {
     id: 1,
-    title: "Dispositivos de Cobro",
+    title: "Meta Financiera",
     description:
-      "Ofrecemos una amplia gama de dispositivos de cobro, incluyendo SmartPOS, MiniPOS, Tablet, MPOS, Web y App diseñados para adaptarse a las necesidades específicas de tu negocio.",
-    icon: <CurrencyExchangeOutlinedIcon sx={{ fontSize: 30 }} />,
+      "Identificamos tus metas financieras para ofrecerte una estrategia de inversión alineada a tus propósitos a corto y largo plazo.",
+    icon: <SpaOutlinedIcon sx={{ fontSize: 30 }} />,
   },
   {
     id: 2,
-    title: "Cashout en Locales de Cobros",
+    title: "Tiempo de Inversión",
     description:
-      "Permite a tus usuarios realizar retiros de efectivo de forma rápida y segura en locales de cobro de servicios como Pago24. Facilita el acceso a efectivo y mejora la experiencia de tus clientes con nuestras soluciones de cashout confiables.",
-    icon: <CreditScoreOutlinedIcon sx={{ fontSize: 30 }} />,
+      "Definimos el horizonte temporal de tus inversiones, ajustando el portafolio para maximizar tus rendimientos en el tiempo deseado.",
+    icon: <HistoryOutlinedIcon sx={{ fontSize: 30 }} />,
   },
   {
     id: 3,
-    title: "Asegurá tus Pagos Electrónicos",
+    title: "Tolerancia al Riesgo",
     description:
-      "Ofrecemos máxima protección en todas tus operaciones y pagos electrónicos, asegurando la confianza y tranquilidad tanto para ti como para tus clientes.",
-    icon: <VerifiedUserOutlinedIcon sx={{ fontSize: 30 }} />,
+      "Evaluamos tu tolerancia al riesgo y diseñamos un plan que balancee seguridad y rentabilidad según tus preferencias.",
+    icon: <LocalFireDepartmentOutlinedIcon sx={{ fontSize: 30 }} />,
   },
   {
     id: 4,
-    title: "Envío y Recepción de Transferencias con CVU",
+    title: "Asesoría Personalizada",
     description:
-      "Facilita el envío y recepción de dinero con CVU, garantizando total seguridad y respaldo legal. Cumplimos con la normativa vigente del Banco Central para que tus transferencias sean rápidas, seguras y confiables.",
-    icon: <AccountBalanceOutlinedIcon sx={{ fontSize: 30 }} />,
+      "Te ofrecemos una guía financiera adaptada a tus necesidades específicas, ayudándote a alcanzar tus metas con estrategias de inversión personalizadas y seguimiento continuo.",
+    icon: <AutoAwesomeOutlinedIcon sx={{ fontSize: 30 }} />,
   },
 ];
 
@@ -62,22 +63,24 @@ const ServiciosSection = () => {
     <Section id="Servicios">
       <Grid container spacing={DEFAULT_SPACING} justifyContent="center" p={2}>
         <Hidden mdDown>
-          <Grid
-            item
-            md={6}
-            lg={5}
-            sx={{ display: "flex", alignItems: "center" }}
-          >
-            <ImageContainer src={DevicePaymentImage} />
+          <Grid item md={6}>
+            <ImageContainer
+              src={ServiciosImage}
+              sx={{
+                borderRadius: "50px 50px 50% 50%",
+                maxHeight: 530,
+                minWidth: 480,
+              }}
+            />
           </Grid>
         </Hidden>
 
-        <Grid item xs={12} sm={8} md={6} lg={5}>
+        <Grid item xs={12} sm={8} md={6}>
           <Stack spacing={2}>
+            <CustomChip label="Potenciá tu Patrimonio" sx={{ maxWidth: 180 }} />
             <AnimatedTitle
-              sx={{ maxWidth: 350 }}
-              text="Servicios de Cobro a tu Medida"
-              primaryWord="Servicios"
+              text="Carteras de Inversión con Seguimiento Personalizado"
+              primaryWord="Seguimiento Personalizado"
             />
             <List
               disablePadding

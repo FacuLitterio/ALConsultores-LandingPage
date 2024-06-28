@@ -1,16 +1,16 @@
 import { Box } from "@mui/material";
-import { keyframes, styled } from "@mui/material/styles";
+import { keyframes, styled, useTheme } from "@mui/material/styles";
 import { DEFAULT_BORDER_RADIUS } from "common/constants";
 import React, { PropsWithChildren } from "react";
 
 const generateBoxShadow = (numStars: number): string => {
   let boxShadowValue = `${Math.random() * 2000}px ${
     Math.random() * 2000
-  }px #8CC90A`;
+  }px #2B5F60`;
   for (let i = 1; i < numStars; i++) {
     boxShadowValue += `, ${Math.random() * 2000}px ${
       Math.random() * 2000
-    }px #8CC90A`;
+    }px #2B5F60`;
   }
   return boxShadowValue;
 };
@@ -69,6 +69,7 @@ const StarLayer = styled("div")<StarLayerProps>(
 );
 
 const StarBackground: React.FC<PropsWithChildren> = ({ children }) => {
+  const theme = useTheme();
   return (
     <Background>
       <StarLayer size={2} boxShadow={shadowsSmall} animationDuration={50} />
@@ -86,9 +87,9 @@ const StarBackground: React.FC<PropsWithChildren> = ({ children }) => {
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
-            fill="#8CC90A"
+            fill={theme.palette.primary.main}
             fill-opacity="1"
-            d="M0,256L48,261.3C96,267,192,277,288,272C384,267,480,245,576,245.3C672,245,768,267,864,272C960,277,1056,267,1152,224C1248,181,1344,107,1392,69.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            d="M0,320L48,304C96,288,192,256,288,240C384,224,480,224,576,229.3C672,235,768,245,864,218.7C960,192,1056,128,1152,90.7C1248,53,1344,43,1392,37.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
       </Box>

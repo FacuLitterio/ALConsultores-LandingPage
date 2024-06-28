@@ -28,7 +28,7 @@ const DecorationBar = styled("span")(({ theme }) => ({
 const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
   text,
   primaryWord,
-  showDecorationBar = true,
+  showDecorationBar = false,
   ...rest
 }) => {
   const { variant = "h4", color = "text.primary", fontWeight = 600 } = rest;

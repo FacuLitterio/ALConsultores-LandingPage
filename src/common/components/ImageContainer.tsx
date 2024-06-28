@@ -29,7 +29,8 @@ const ImageContainer: React.FC<ImageContainerProps> = ({ src, sx }) => {
         margin: "0 auto",
         background: `url(${src}) no-repeat`,
         backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "110%",
         ...sx,
       }}
     />

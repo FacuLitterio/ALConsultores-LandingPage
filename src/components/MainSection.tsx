@@ -1,30 +1,26 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Box, Button, Grid, Hidden, Paper, Stack } from "@mui/material";
-import DevicePaymentImage from "common/assets/Main/PostnetMain.png";
+import {
+  Avatar,
+  Box,
+  Button,
+  Grid,
+  Hidden,
+  Stack,
+  Typography,
+} from "@mui/material";
+import MainImage from "common/assets/Main/MainImage.png";
+import PandaLogo from "common/assets/Main/PandaPay_Logo 1.png";
 import AnimateWhileView from "common/components/AnimateWhileView";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
+import CustomChip from "common/components/Chip";
 import ImageContainer from "common/components/ImageContainer";
 import StarBackground from "common/components/StarsBackground";
-import { MEDIOS_DE_PAGO_LOGOS } from "common/constants";
 import onClickWhatsApp from "common/helpers/onClickWhatsApp";
-import RedesSociales from "./RedesSociales";
 
 const APPBAR_OFFSET = "60px";
 
 const MainSection = () => {
-  const FormasDePago = () => {
-    return (
-      <Stack direction="row" sx={{ mt: 2 }}>
-        {MEDIOS_DE_PAGO_LOGOS.slice(0, 3).map((mp) => (
-          <Paper elevation={0}>
-            <img src={mp} height={20} width={100} />
-          </Paper>
-        ))}
-      </Stack>
-    );
-  };
-
   return (
     <StarBackground>
       <Box
@@ -33,14 +29,14 @@ const MainSection = () => {
         sx={{
           mt: APPBAR_OFFSET,
           px: { xs: 4, sm: 12, md: 18, xl: 25 },
-          py: { xs: 5, sm: 10, xl: 15 },
+          py: { xs: 5, sm: 8, xl: 15 },
         }}
       >
         <Grid container alignItems="center" justifyContent="center" spacing={5}>
           <Grid item xs={12} md={6} xl={4}>
             <Stack spacing={2}>
               <AnimateWhileView>
-                <RedesSociales />
+                <CustomChip label="Asesoría Financiera" />
               </AnimateWhileView>
               <AnimatedTitle
                 sx={{
@@ -49,45 +45,61 @@ const MainSection = () => {
                   lg: { fontSize: "3rem" },
                 }}
                 variant="h3"
-                text="¡Impulsa tus Ventas con PandaPay!"
-                primaryWord="Pay!"
+                text="Transformando Sueños Financieros en Realidad"
+                primaryWord="Sueños Financieros"
               />
               <AnimatedSubtitle
                 variant="subtitle2"
                 color="text.secondary"
                 sx={{ fontSize: ".9rem" }}
-                text={`Transforma tu negocio con nuestras soluciones de 
-                cobro personalizadas diseñadas para maximizar tus ingresos. 
-                Con una variedad de dispositivos de venta y opciones de acreditación 
-                flexibles, PandaPay es tu socio ideal para llevar tus ventas al siguiente nivel. 
-                ¡Descubre cómo podemos ayudarte a crecer y triunfar en el mercado!`}
+                text={`Ofrecemos asesoramiento financiero experto y personalizado para guiar tu trayectoria con confianza. Combinamos análisis de mercado avanzados con nuestra vasta experiencia en inversiones para brindarte una dirección clara y segura. Nuestro compromiso es maximizar tu potencial de crecimiento y asegurar tu éxito financiero a largo plazo.`}
               />
               <AnimateWhileView>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  sx={{
-                    maxWidth: 200,
-                    color: "background.paper",
-                    textTransform: "none",
-                  }}
-                  endIcon={<ArrowForwardIcon />}
-                  onClick={onClickWhatsApp}
+                <Stack spacing={1} direction="row">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{
+                      maxWidth: 200,
+                      textTransform: "none",
+                      borderRadius: 20,
+                    }}
+                    endIcon={<ArrowForwardIcon />}
+                    onClick={onClickWhatsApp}
+                  >
+                    Comenzá Ahora
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    sx={{
+                      textTransform: "none",
+                      maxWidth: 200,
+                      borderRadius: 20,
+                    }}
+                    endIcon={<ArrowForwardIcon />}
+                  >
+                    Aprendé Más
+                  </Button>
+                </Stack>
+              </AnimateWhileView>
+              <Stack spacing={1} sx={{ pt: 2 }}>
+                <Typography
+                  variant="subtitle2"
+                  color="text.disabled"
+                  fontWeight="bolder"
                 >
-                  Empezá a Cobrar
-                </Button>
-              </AnimateWhileView>
-              <AnimateWhileView>
-                <FormasDePago />
-              </AnimateWhileView>
+                  Respaldados por Numerosas Empresas
+                </Typography>
+                <Stack direction="row">
+                  <Avatar src={PandaLogo} sx={{ height: 50, width: 50 }} />
+                </Stack>
+              </Stack>
             </Stack>
           </Grid>
           <Hidden mdDown>
             <Grid item md={6} xl={4}>
-              <ImageContainer
-                src={DevicePaymentImage}
-                sx={{ maxHeight: 500 }}
-              />
+              <ImageContainer src={MainImage} sx={{ maxHeight: 500 }} />
             </Grid>
           </Hidden>
         </Grid>
