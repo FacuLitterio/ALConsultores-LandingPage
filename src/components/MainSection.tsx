@@ -34,7 +34,7 @@ const MainSection = () => {
       >
         <Grid container alignItems="center" justifyContent="center" spacing={5}>
           <Grid item xs={12} md={6} xl={4}>
-            <Stack spacing={2}>
+            <Stack spacing={1}>
               <AnimateWhileView>
                 <CustomChip label="Asesoría Financiera" />
               </AnimateWhileView>
@@ -78,6 +78,7 @@ const MainSection = () => {
                       borderRadius: 20,
                     }}
                     endIcon={<ArrowForwardIcon />}
+                    onClick={onClickWhatsApp}
                   >
                     Aprendé Más
                   </Button>

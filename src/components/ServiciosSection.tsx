@@ -76,12 +76,12 @@ const ServiciosSection = () => {
         </Hidden>
 
         <Grid item xs={12} sm={8} md={6}>
-          <Stack spacing={2} alignItems="center">
+          <Stack spacing={2} sx={{ textAlign: { xs: "center", md: "start" } }}>
             <CustomChip label="Potenciá tu Patrimonio" sx={{ maxWidth: 180 }} />
             <AnimatedTitle
               text="Carteras de Inversión con Seguimiento Personalizado"
               primaryWord="Seguimiento Personalizado"
-              textAlign="center"
+              sx={{ textAlign: { xs: "center", md: "start" } }}
             />
             <List
               disablePadding

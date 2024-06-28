@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import InversionesTiempoRealImage from "common/assets/InversionesTiempoReal/Image.png";
+import onClickWhatsApp from "common/helpers/onClickWhatsApp";
 
 const InversionesTiempoRealSection = () => {
   return (
@@ -38,6 +39,7 @@ const InversionesTiempoRealSection = () => {
               <Button
                 variant="contained"
                 color="primary"
+                onClick={() => onClickWhatsApp()}
                 sx={{
                   textTransform: "none",
                   borderRadius: 20,

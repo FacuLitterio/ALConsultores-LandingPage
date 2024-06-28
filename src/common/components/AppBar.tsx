@@ -1,12 +1,13 @@
 import {
+  Avatar,
   Box,
   Button,
   LinearProgress,
   AppBar as MuiAppBar,
   Stack,
   Toolbar,
-  Typography,
 } from "@mui/material";
+import Logo from "common/assets/Logo.svg";
 import { DEFAULT_ELEVATION } from "common/constants";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -109,14 +110,7 @@ const AppBar = () => {
             sx={{ cursor: "pointer" }}
             onClick={() => handleScrollToSection("Inicio")}
           >
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              component="span"
-              color="text.primary"
-            >
-              AL Consultores
-            </Typography>
+            <Avatar src={Logo} sx={{ width: 150 }} />
           </Stack>
           <Box sx={{ flexGrow: 1 }} />
           <Box

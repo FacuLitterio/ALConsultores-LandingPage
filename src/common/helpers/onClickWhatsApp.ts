@@ -1,8 +1,8 @@
-export const PHONE_NUMBER = "+541125442829";
+export const PHONE_NUMBER = "+5491155256272";
 
 const onClickWhatsApp = () => {
   const message = encodeURIComponent(
-    "¡Hola! Quiero información sobre PandaPay y sus servicios de medios de pago. ¿Podemos hablar?"
+    "¡Hola! Quiero información sobre AL Consultores y sus servicios financieros. ¿Podemos hablar?"
   );
   window.open(`https://wa.me/${PHONE_NUMBER}/?text=${message}`, "_blank");
 };

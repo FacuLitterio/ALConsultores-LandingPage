@@ -6,11 +6,11 @@ import React, { PropsWithChildren } from "react";
 const generateBoxShadow = (numStars: number): string => {
   let boxShadowValue = `${Math.random() * 2000}px ${
     Math.random() * 2000
-  }px #2B5F60`;
+  }px #37718E`;
   for (let i = 1; i < numStars; i++) {
     boxShadowValue += `, ${Math.random() * 2000}px ${
       Math.random() * 2000
-    }px #2B5F60`;
+    }px #37718E`;
   }
   return boxShadowValue;
 };
