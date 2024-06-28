@@ -3,7 +3,7 @@ import InversionesTiempoRealImage from "common/assets/InversionesTiempoReal/Imag
 
 const InversionesTiempoRealSection = () => {
   return (
-    <Box sx={{ width: 1, p: 5 }}>
+    <Box sx={{ width: 1, p: 5 }} id="Invierte">
       <Box
         sx={{
           width: 1,
@@ -15,9 +15,10 @@ const InversionesTiempoRealSection = () => {
       >
         <Grid
           container
-          spacing={10}
+          spacing={5}
           alignItems="center"
           justifyContent="center"
+          p={2}
         >
           <Grid item xs={12} md={5}>
             <img src={InversionesTiempoRealImage} width="100%" />

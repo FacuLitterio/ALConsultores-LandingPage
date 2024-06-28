@@ -99,7 +99,10 @@ const MainSection = () => {
           </Grid>
           <Hidden mdDown>
             <Grid item md={6} xl={4}>
-              <ImageContainer src={MainImage} sx={{ maxHeight: 500 }} />
+              <ImageContainer
+                src={MainImage}
+                sx={{ maxHeight: 450, backgroundPosition: "top" }}
+              />
             </Grid>
           </Hidden>
         </Grid>

@@ -1,4 +1,3 @@
-import LoginIcon from "@mui/icons-material/Login";
 import {
   Box,
   Button,
@@ -163,20 +162,6 @@ const AppBar = () => {
               ))}
             </Stack>
           </Box>
-
-          <Stack direction="row" spacing={1}>
-            <Button
-              color="primary"
-              variant="outlined"
-              startIcon={<LoginIcon />}
-              onClick={handleClickIniciarSesion}
-            >
-              Ingresar
-            </Button>
-            <Button variant="contained" color="primary">
-              Registrarme
-            </Button>
-          </Stack>
         </Toolbar>
         <LinearProgress variant="determinate" value={hookedYPostion * 100} />
       </MuiAppBar>

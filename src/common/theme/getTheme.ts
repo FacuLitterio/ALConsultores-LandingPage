@@ -28,8 +28,8 @@ const getTheme = (mode: PaletteMode): ThemeOptions => {
         ? {
             // palette values for light mode
             text: {
-              primary: "#444444",
-              secondary: grey[800],
+              primary: "#333333",
+              secondary: "#787878",
             },
           }
         : {

@@ -1,13 +1,12 @@
 /* eslint-disable no-irregular-whitespace */
 import { Avatar, Grid, Link, Stack, Typography } from "@mui/material";
-import PandaPayIcon from "common/assets/PandaPay_Logo.png";
 import { DEFAULT_BORDER_RADIUS } from "common/constants";
 import RedesSociales from "./RedesSociales";
 
 const FooterSection = () => {
   const PandaPayLogo = (
     <Stack direction="row" alignItems="center" spacing={1}>
-      <Avatar src={PandaPayIcon} sx={{ height: 45, width: 45 }} />
+      <Avatar sx={{ height: 45, width: 45 }} />
       <Typography
         variant="h6"
         fontWeight="bold"
@@ -80,6 +79,7 @@ const FooterSection = () => {
         px: { xs: 5, md: 8, lg: 13, xl: 15 },
         pt: { xs: 5 },
         pb: 3,
+        mt: 5,
         bgcolor: "primary.main",
         borderRadius: `0px ${DEFAULT_BORDER_RADIUS}px 0px 0px`,
       }}

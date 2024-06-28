@@ -11,9 +11,6 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import TestimonioImage1 from "common/assets/Testimonios/Testimonio1.png";
-import TestimonioImage2 from "common/assets/Testimonios/Testimonio2.png";
-import TestimonioImage3 from "common/assets/Testimonios/Testimonio3.png";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
 import { DEFAULT_BORDER_RADIUS } from "common/constants";
@@ -22,33 +19,32 @@ import Carousel from "react-material-ui-carousel";
 const TESTIMONIOS = [
   {
     id: 1,
-    name: "Zhaotan Wei",
-    subtitle: "Wen Supermercados",
+    name: "Alan Gonzalez",
+    subtitle: "PandaPay",
     rating: 4,
-    url: TestimonioImage1,
+    url: "",
     description:
-      "❝Desde que comenzamos a utilizar PandaPay, hemos experimentado una notable mejora en la eficiencia de nuestros cobros y transacciones. Su atención personalizada y las soluciones a medida realmente han hecho la diferencia para nuestro negocio.❝",
+      "❝Desde que comenzamos a trabajar con la empresa de asesoría financiera, hemos visto un crecimiento notable en nuestras inversiones. Su enfoque personalizado y soluciones a medida realmente han marcado la diferencia para nuestro portafolio.❞",
   },
   {
     id: 2,
-    name: "Gao Lin",
-    subtitle: "Smart Shop",
-    url: TestimonioImage2,
+    name: "Sebastian Casanola",
+    subtitle: "SushiClub",
+    url: "",
     rating: 5,
     description:
-      "❝PandaPay ha simplificado enormemente nuestro proceso de pagos. La facilidad de uso de su plataforma y la seguridad que ofrecen en cada transacción nos han brindado tranquilidad y confianza en nuestro día a día.❝",
+      "❝La empresa de asesoría financiera ha simplificado enormemente nuestro proceso de inversión. La facilidad de uso de su plataforma y la seguridad que ofrecen en cada transacción nos han brindado tranquilidad y confianza en nuestras decisiones financieras diarias.❞",
   },
   {
     id: 3,
-    name: "Inés Rivarola",
-    subtitle: "TributeNess",
+    name: "Inés Prada",
+    subtitle: "TributeNess Capital",
     rating: 5,
-    url: TestimonioImage3,
+    url: "",
     description:
-      "❝¡Increíble servicio! Siempre que hemos tenido alguna consulta o requerimiento, el equipo de PandaPay ha estado disponible y ha resuelto nuestras inquietudes de manera rápida y eficiente. Definitivamente los recomiendo.❝",
+      "❝¡Increíble servicio! Siempre que hemos tenido alguna consulta o requerimiento, el equipo de la empresa de asesoría financiera ha estado disponible y ha resuelto nuestras inquietudes de manera rápida y eficiente. Definitivamente los recomiendo.❞",
   },
 ];
-
 const TestimoniosSection = () => {
   const rotateArray = (array: typeof TESTIMONIOS, step: number) => {
     const rotated = [...array];
@@ -71,6 +67,7 @@ const TestimoniosSection = () => {
         bgcolor: "primary.main",
         py: 5,
         mx: "auto",
+        my: { xs: 5, lg: 10 },
         borderRadius: DEFAULT_BORDER_RADIUS,
       }}
     >
@@ -89,8 +86,7 @@ const TestimoniosSection = () => {
             textAlign="center"
             color="background.paper"
             text="Explora las experiencias y opiniones de nuestros clientes, quienes
-            comparten cómo PandaPay ha transformado y mejorado sus procesos de
-            pago y transacciones comerciales."
+            comparten cómo AL Consultores ha transformado y mejorado sus finanzas diarias."
           />
         </Stack>
         <Box sx={{ width: 1 }}>

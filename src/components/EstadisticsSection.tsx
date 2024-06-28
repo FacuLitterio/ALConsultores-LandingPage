@@ -13,8 +13,14 @@ const EstadisticsSection = () => {
           justifyContent: "center",
         }}
       >
-        <Grid container justifyContent="center" alignItems="center" p={3}>
-          <Grid item xs={12} sm={6} md={3.5}>
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          p={3}
+          spacing={5}
+        >
+          <Grid item xs={12} sm={6} md={4}>
             <Stack spacing={0.5} alignItems="center">
               <Typography variant="h1" color="background.paper">
                 +150

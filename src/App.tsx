@@ -7,15 +7,13 @@ import {
   responsiveFontSizes,
 } from "@mui/material";
 import WhatsAppSpeedDial from "common/components/WhatsAppSpeedDial";
-import ContactoSection from "components/ContactoSection";
+import CryptoSection from "components/CryptoSection";
 import EstadisticsSection from "components/EstadisticsSection";
-import FAQSection from "components/FAQSection";
 import FooterSection from "components/FooterSection";
 import InversionesTiempoRealSection from "components/InversionesTiempoReal";
 import MainSection from "components/MainSection";
 import ServiciosSection from "components/ServiciosSection";
 import TestimoniosSection from "components/TestimoniosSection";
-import TransaccionesSection from "components/TransaccionesSection";
 import { createContext, useMemo, useState } from "react";
 import AppBar from "./common/components/AppBar";
 import getTheme from "./common/theme/getTheme";
@@ -55,10 +53,8 @@ const App = () => {
           <EstadisticsSection />
           <ServiciosSection />
           <InversionesTiempoRealSection />
-          <TransaccionesSection />
-          <FAQSection />
+          <CryptoSection />
           <TestimoniosSection />
-          <ContactoSection />
           <FooterSection />
           <WhatsAppSpeedDial />
         </Box>

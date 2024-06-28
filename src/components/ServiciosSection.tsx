@@ -69,18 +69,19 @@ const ServiciosSection = () => {
               sx={{
                 borderRadius: "50px 50px 50% 50%",
                 maxHeight: 530,
-                minWidth: 480,
+                minWidth: 500,
               }}
             />
           </Grid>
         </Hidden>
 
         <Grid item xs={12} sm={8} md={6}>
-          <Stack spacing={2}>
+          <Stack spacing={2} alignItems="center">
             <CustomChip label="Potenciá tu Patrimonio" sx={{ maxWidth: 180 }} />
             <AnimatedTitle
               text="Carteras de Inversión con Seguimiento Personalizado"
               primaryWord="Seguimiento Personalizado"
+              textAlign="center"
             />
             <List
               disablePadding
