@@ -10,7 +10,8 @@ import {
 import Logo from "common/assets/Logo.svg";
 import { DEFAULT_ELEVATION } from "common/constants";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import CotizacionesToolbar from "./CotizacionesToolbar";
 
 const pages = [
   { id: 1, label: "Inicio" },
@@ -25,7 +26,6 @@ const AnimatedBox = motion(Box);
 const AppBar = () => {
   const [activeSection, setActiveSection] = useState("");
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
-  const handleClickIniciarSesion = useCallback(() => {}, []);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -59,6 +59,7 @@ const AppBar = () => {
     });
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       sectionsRef.current.forEach((section) => {
         if (section) observer.unobserve(section);
       });
@@ -157,6 +158,9 @@ const AppBar = () => {
             </Stack>
           </Box>
         </Toolbar>
+        <Stack>
+          <CotizacionesToolbar />
+        </Stack>
         <LinearProgress variant="determinate" value={hookedYPostion * 100} />
       </MuiAppBar>
     </>

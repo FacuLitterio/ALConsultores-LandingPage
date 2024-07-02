@@ -18,7 +18,7 @@ import ImageContainer from "common/components/ImageContainer";
 import StarBackground from "common/components/StarsBackground";
 import onClickWhatsApp from "common/helpers/onClickWhatsApp";
 
-const APPBAR_OFFSET = "60px";
+const APPBAR_OFFSET = "100px";
 
 const MainSection = () => {
   return (
@@ -27,6 +27,7 @@ const MainSection = () => {
         id="Inicio"
         component="section"
         sx={{
+          minHeight: "100vh",
           mt: APPBAR_OFFSET,
           px: { xs: 4, sm: 12, md: 18, xl: 25 },
           py: { xs: 5, sm: 8, xl: 15 },
@@ -102,7 +103,10 @@ const MainSection = () => {
             <Grid item md={6} xl={4}>
               <ImageContainer
                 src={MainImage}
-                sx={{ maxHeight: 450, backgroundPosition: "top" }}
+                sx={{
+                  maxHeight: 430,
+                  maxWidth: 340,
+                }}
               />
             </Grid>
           </Hidden>
