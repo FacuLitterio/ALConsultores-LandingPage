@@ -4,7 +4,6 @@ import onClickWhatsApp from "common/helpers/onClickWhatsApp";
 
 const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
   position: "fixed",
-  color: theme.palette.background.paper,
   "&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft": {
     bottom: theme.spacing(5),
     right: theme.spacing(5),

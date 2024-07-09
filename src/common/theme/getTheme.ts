@@ -3,7 +3,7 @@ import { grey } from "@mui/material/colors";
 
 const commonTokens = () => ({
   primary: {
-    main: "#37718E",
+    main: "#081648",
     light: "#E0ECEC",
   },
 });

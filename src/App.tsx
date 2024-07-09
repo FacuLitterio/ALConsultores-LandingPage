@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import WhatsAppSpeedDial from "common/components/WhatsAppSpeedDial";
 import CryptoSection from "components/CryptoSection";
-import EstadisticsSection from "components/EstadisticsSection";
 import FooterSection from "components/FooterSection";
 import InversionesTiempoRealSection from "components/InversionesTiempoReal";
 import MainSection from "components/MainSection";
@@ -50,7 +49,6 @@ const App = () => {
         >
           <AppBar />
           <MainSection />
-          <EstadisticsSection />
           <ServiciosSection />
           <InversionesTiempoRealSection />
           <CryptoSection />

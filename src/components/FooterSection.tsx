@@ -6,7 +6,12 @@ import RedesSociales from "./RedesSociales";
 
 const FooterSection = () => {
   const PandaPayLogo = (
-    <Stack direction="row" alignItems="center" spacing={1}>
+    <Stack
+      direction="row"
+      alignItems="center"
+      spacing={1}
+      sx={{ width: 180, bgcolor: "background.paper", borderRadius: 10 }}
+    >
       <Avatar src={Logo} sx={{ width: 150 }} />
     </Stack>
   );

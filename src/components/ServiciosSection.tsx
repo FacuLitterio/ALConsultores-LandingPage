@@ -14,7 +14,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import ServiciosImage from "common/assets/Servicios/ServiciosImage.png";
+import ServiciosImage from "common/assets/Servicios/WallStreet.jpeg";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
 import CustomChip from "common/components/Chip";
@@ -60,7 +60,7 @@ const ServiciosSection = () => {
   const theme = useTheme();
   const isSmDevice = useMediaQuery(theme.breakpoints.up("md"));
   return (
-    <Section id="Servicios">
+    <Section id="Servicios" sx={{ pt: { xs: 0, md: 10, lg: 20 } }}>
       <Grid container spacing={DEFAULT_SPACING} justifyContent="center" p={2}>
         <Hidden mdDown>
           <Grid item md={6}>
@@ -68,7 +68,7 @@ const ServiciosSection = () => {
               src={ServiciosImage}
               sx={{
                 borderRadius: "50px 50px 50% 50%",
-                maxHeight: 530,
+                maxHeight: 500,
                 minWidth: 500,
               }}
             />

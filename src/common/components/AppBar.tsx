@@ -2,6 +2,7 @@ import {
   Avatar,
   Box,
   Button,
+  Hidden,
   LinearProgress,
   AppBar as MuiAppBar,
   Stack,
@@ -158,9 +159,11 @@ const AppBar = () => {
             </Stack>
           </Box>
         </Toolbar>
-        <Stack>
-          <CotizacionesToolbar />
-        </Stack>
+        <Hidden mdDown>
+          <Stack>
+            <CotizacionesToolbar />
+          </Stack>
+        </Hidden>
         <LinearProgress variant="determinate" value={hookedYPostion * 100} />
       </MuiAppBar>
     </>

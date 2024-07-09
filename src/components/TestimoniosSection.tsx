@@ -11,6 +11,9 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import Subject1 from "common/assets/Testimonios/Subject1.png";
+import Subject2 from "common/assets/Testimonios/Subject2.png";
+import Subject3 from "common/assets/Testimonios/Subject3.jpeg";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
 import { DEFAULT_BORDER_RADIUS } from "common/constants";
@@ -22,15 +25,15 @@ const TESTIMONIOS = [
     name: "Alan Gonzalez",
     subtitle: "PandaPay",
     rating: 4,
-    url: "",
+    url: Subject3,
     description:
       "❝Desde que comenzamos a trabajar con la empresa de asesoría financiera, hemos visto un crecimiento notable en nuestras inversiones. Su enfoque personalizado y soluciones a medida realmente han marcado la diferencia para nuestro portafolio.❞",
   },
   {
     id: 2,
-    name: "Sebastian Casanola",
+    name: "Ana Maria Castillo",
     subtitle: "SushiClub",
-    url: "",
+    url: Subject2,
     rating: 5,
     description:
       "❝La empresa de asesoría financiera ha simplificado enormemente nuestro proceso de inversión. La facilidad de uso de su plataforma y la seguridad que ofrecen en cada transacción nos han brindado tranquilidad y confianza en nuestras decisiones financieras diarias.❞",
@@ -40,7 +43,7 @@ const TESTIMONIOS = [
     name: "Inés Prada",
     subtitle: "TributeNess Capital",
     rating: 5,
-    url: "",
+    url: Subject1,
     description:
       "❝¡Increíble servicio! Siempre que hemos tenido alguna consulta o requerimiento, el equipo de la empresa de asesoría financiera ha estado disponible y ha resuelto nuestras inquietudes de manera rápida y eficiente. Definitivamente los recomiendo.❞",
   },
