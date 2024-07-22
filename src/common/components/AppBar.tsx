@@ -8,7 +8,8 @@ import {
   Stack,
   Toolbar,
 } from "@mui/material";
-import Logo from "common/assets/Logo.svg";
+import LogoBlack from "common/assets/LogoBlack.svg";
+import LogoWhite from "common/assets/LogoWhite.svg";
 import { DEFAULT_ELEVATION } from "common/constants";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -16,8 +17,8 @@ import CotizacionesToolbar from "./CotizacionesToolbar";
 
 const pages = [
   { id: 1, label: "Inicio" },
-  { id: 2, label: "Servicios" },
-  { id: 3, label: "Invierte" },
+  { id: 2, label: "Inversiones" },
+  { id: 3, label: "Testimonios" },
   { id: 4, label: "Crypto" },
   { id: 5, label: "Contacto" },
 ];
@@ -97,12 +98,14 @@ const AppBar = () => {
     },
   };
 
+  const isInitialPosition = window.scrollY === 0;
+
   return (
     <>
       <MuiAppBar
         position="fixed"
         elevation={DEFAULT_ELEVATION}
-        sx={{ bgcolor: "background.paper" }}
+        sx={{ bgcolor: isInitialPosition ? "transparent" : "background.paper" }}
       >
         <Toolbar>
           <Stack
@@ -112,7 +115,10 @@ const AppBar = () => {
             sx={{ cursor: "pointer" }}
             onClick={() => handleScrollToSection("Inicio")}
           >
-            <Avatar src={Logo} sx={{ width: 150 }} />
+            <Avatar
+              src={isInitialPosition ? LogoWhite : LogoBlack}
+              sx={{ width: 150 }}
+            />
           </Stack>
           <Box sx={{ flexGrow: 1 }} />
           <Box
@@ -127,10 +133,11 @@ const AppBar = () => {
                   <Button
                     sx={{
                       textTransform: "none",
-                      color:
-                        activeSection === page.label
-                          ? "primary.main"
-                          : "text.primary",
+                      color: isInitialPosition
+                        ? "white"
+                        : activeSection === page.label
+                        ? "primary.main"
+                        : "text.primary",
                     }}
                     onClick={() => {
                       handleScrollToSection(page.label);
@@ -164,7 +171,9 @@ const AppBar = () => {
             <CotizacionesToolbar />
           </Stack>
         </Hidden>
-        <LinearProgress variant="determinate" value={hookedYPostion * 100} />
+        {!isInitialPosition && (
+          <LinearProgress variant="determinate" value={hookedYPostion * 100} />
+        )}
       </MuiAppBar>
     </>
   );

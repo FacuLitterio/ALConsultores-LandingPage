@@ -8,7 +8,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import IntroVideo from "common/assets/Main/IntroVideo3.mp4";
+import GradientBg from "common/assets/Main/GradientBg.svg";
 import MainImage from "common/assets/Main/MainImage.jpeg";
 import PandaLogo from "common/assets/Main/PandaPay_Logo 1.png";
 import AnimateWhileView from "common/components/AnimateWhileView";
@@ -29,14 +29,10 @@ const MainSection = () => {
         minHeight: "100vh",
         mt: APPBAR_OFFSET,
         px: { xs: 4, sm: 12, md: 18, xl: 25 },
-        py: { xs: 5, sm: 8, xl: 15 },
+        py: { xs: 5, xl: 15 },
       }}
     >
       <Box
-        component="video"
-        autoPlay
-        loop
-        muted
         sx={{
           position: "absolute",
           top: 0,
@@ -45,10 +41,12 @@ const MainSection = () => {
           minHeight: "100vh",
           objectFit: "cover",
           zIndex: 1,
+          backgroundImage: `url(${GradientBg})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
-      >
-        <source src={IntroVideo} type="video/mp4" />
-      </Box>
+      />
       <Grid
         container
         alignItems="center"

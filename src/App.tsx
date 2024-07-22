@@ -9,9 +9,8 @@ import {
 import WhatsAppSpeedDial from "common/components/WhatsAppSpeedDial";
 import CryptoSection from "components/CryptoSection";
 import FooterSection from "components/FooterSection";
-import InversionesTiempoRealSection from "components/InversionesTiempoReal";
+import InversionesSection from "components/InversionesSection";
 import MainSection from "components/MainSection";
-import ServiciosSection from "components/ServiciosSection";
 import TestimoniosSection from "components/TestimoniosSection";
 import { createContext, useMemo, useState } from "react";
 import AppBar from "./common/components/AppBar";
@@ -49,8 +48,7 @@ const App = () => {
         >
           <AppBar />
           <MainSection />
-          <ServiciosSection />
-          <InversionesTiempoRealSection />
+          <InversionesSection />
           <CryptoSection />
           <TestimoniosSection />
           <FooterSection />

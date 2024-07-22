@@ -1,4 +1,4 @@
-import { Divider, Grid, Stack, Typography } from "@mui/material";
+import { Box, Divider, Grid, Stack, styled, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -10,6 +10,39 @@ type Cotizacion = {
   venta: number;
   fechaActualizacion: string;
 };
+
+const RippleBox = styled(Box)(({ theme }) => ({
+  position: "relative",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: 8,
+  height: 8,
+  backgroundColor: "#44b700",
+  borderRadius: "50%",
+  boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    borderRadius: "50%",
+    border: "1px solid currentColor",
+    animation: "ripple 1.2s infinite ease-in-out",
+  },
+  "@keyframes ripple": {
+    "0%": {
+      transform: "scale(.8)",
+      opacity: 1,
+    },
+    "100%": {
+      transform: "scale(2.4)",
+      opacity: 0,
+    },
+  },
+}));
 
 const AnimatedGrid = motion(Grid);
 
@@ -35,6 +68,8 @@ const CotizacionesToolbar = () => {
     getCotizaciones();
   }, []);
 
+  const isInitialPosition = window.scrollY === 0;
+
   return (
     <AnimatedGrid
       container
@@ -42,7 +77,7 @@ const CotizacionesToolbar = () => {
         x: ["0%", "-100%"],
         transition: {
           ease: "linear",
-          duration: 15,
+          duration: 25,
           repeat: Infinity,
         },
       }}
@@ -50,31 +85,33 @@ const CotizacionesToolbar = () => {
       {cotizaciones.map((item, idx) => (
         <>
           <Grid item xs key={idx}>
-            <Stack spacing={0.5}>
-              <Stack alignItems="center" spacing={0.5}>
-                <Typography
-                  variant="body2"
-                  color="primary.main"
-                  fontWeight={500}
-                >
-                  USD {item.nombre.toUpperCase()}
-                </Typography>
-                <Typography
-                  variant="subtitle2"
-                  color="text.secondary"
-                  fontWeight={500}
-                >
-                  {new Intl.NumberFormat("en-US", {
-                    style: "currency",
-                    currency: "USD",
-                  }).format(item.compra)}{" "}
-                  |{" "}
-                  {new Intl.NumberFormat("en-US", {
-                    style: "currency",
-                    currency: "USD",
-                  }).format(item.venta)}
-                </Typography>
-              </Stack>
+            <Stack direction="row" alignItems="center" spacing={1}>
+              <RippleBox />
+              <Typography
+                variant="body2"
+                sx={{ color: isInitialPosition ? "white" : "text.primary" }}
+                fontWeight={600}
+                fontSize={12}
+              >
+                {item.nombre}:
+              </Typography>
+              <Typography
+                variant="subtitle2"
+                sx={{ color: isInitialPosition ? "white" : "text.primary" }}
+                color="text.secondary"
+                fontSize={13}
+                fontWeight={500}
+              >
+                {new Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(item.compra)}{" "}
+                |{" "}
+                {new Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(item.venta)}
+              </Typography>
             </Stack>
           </Grid>
           {idx !== cotizaciones.length - 1 && (
