@@ -38,7 +38,7 @@ const MainSection = () => {
           top: 0,
           left: 0,
           width: "100%",
-          minHeight: "100vh",
+          minHeight: "110vh",
           objectFit: "cover",
           zIndex: 1,
           backgroundImage: `url(${GradientBg})`,

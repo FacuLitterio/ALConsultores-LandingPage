@@ -60,7 +60,7 @@ const InversionesSection = () => {
   const theme = useTheme();
   const isSmDevice = useMediaQuery(theme.breakpoints.up("md"));
   return (
-    <Section id="Inversiones" sx={{ pt: { xs: 0, md: 10, lg: 20 } }}>
+    <Section id="Inversiones">
       <Grid container spacing={DEFAULT_SPACING} justifyContent="center" p={2}>
         <Hidden mdDown>
           <Grid item md={6}>

@@ -152,7 +152,10 @@ const AppBar = () => {
                       left: 0,
                       right: 0,
                       height: "3px",
-                      backgroundColor: (theme) => theme.palette.primary.main,
+                      backgroundColor: (theme) =>
+                        isInitialPosition
+                          ? "white"
+                          : theme.palette.primary.main,
                       transformOrigin: "center",
                     }}
                     variants={variants}

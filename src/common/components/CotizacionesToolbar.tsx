@@ -11,7 +11,7 @@ type Cotizacion = {
   fechaActualizacion: string;
 };
 
-const RippleBox = styled(Box)(({ theme }) => ({
+const RippleBox = styled(Box)(() => ({
   position: "relative",
   display: "inline-flex",
   alignItems: "center",
@@ -20,7 +20,6 @@ const RippleBox = styled(Box)(({ theme }) => ({
   height: 8,
   backgroundColor: "#44b700",
   borderRadius: "50%",
-  boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
   "&::after": {
     content: '""',
     position: "absolute",

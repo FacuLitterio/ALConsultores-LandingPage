@@ -22,8 +22,8 @@ import Carousel from "react-material-ui-carousel";
 const TESTIMONIOS = [
   {
     id: 1,
-    name: "Alan Gonzalez",
-    subtitle: "PandaPay",
+    name: "Matias Sebastian",
+    subtitle: "Automata Minds",
     rating: 4,
     url: Subject3,
     description:
@@ -31,7 +31,7 @@ const TESTIMONIOS = [
   },
   {
     id: 2,
-    name: "Ana Maria Castillo",
+    name: "Manuela Castillo",
     subtitle: "SushiClub",
     url: Subject2,
     rating: 5,
