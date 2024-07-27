@@ -18,7 +18,7 @@ import CustomChip from "common/components/Chip";
 import ImageContainer from "common/components/ImageContainer";
 import onClickWhatsApp from "common/helpers/onClickWhatsApp";
 
-const APPBAR_OFFSET = "100px";
+const APPBAR_OFFSET = "60px";
 
 const MainSection = () => {
   return (
@@ -54,7 +54,7 @@ const MainSection = () => {
         spacing={5}
         sx={{ position: "relative", zIndex: 3 }}
       >
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={7}>
           <Stack spacing={2} p={2}>
             <AnimateWhileView>
               <CustomChip label="Asesoría Financiera" />
@@ -121,12 +121,12 @@ const MainSection = () => {
           </Stack>
         </Grid>
         <Hidden mdDown>
-          <Grid item md={6}>
+          <Grid item md={5}>
             <ImageContainer
               src={MainImage}
               sx={{
-                maxHeight: 480,
-                maxWidth: 400,
+                maxHeight: 400,
+                maxWidth: 350,
               }}
             />
           </Grid>

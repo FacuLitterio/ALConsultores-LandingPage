@@ -2,6 +2,7 @@
 import { Avatar, Grid, Link, Stack, Typography } from "@mui/material";
 import Logo from "common/assets/LogoWhite.svg";
 import { DEFAULT_BORDER_RADIUS } from "common/constants";
+import onClickWhatsApp from "common/helpers/onClickWhatsApp";
 import RedesSociales from "./RedesSociales";
 
 const FooterSection = () => {
@@ -41,8 +42,13 @@ const FooterSection = () => {
       <Link variant="body2" color="background.paper">
         11-5525-6272
       </Link>
-      <Link variant="body2" color="background.paper">
-        info@alconsultores.com.ar
+      <Link
+        variant="body2"
+        color="background.paper"
+        onClick={onClickWhatsApp}
+        sx={{ cursor: "pointer" }}
+      >
+        alconsultores_economicos@gmail.com
       </Link>
     </Stack>
   );

@@ -100,6 +100,8 @@ const AppBar = () => {
 
   const isInitialPosition = window.scrollY === 0;
 
+  const logoSrc = isInitialPosition ? LogoWhite : LogoBlack;
+
   return (
     <>
       <MuiAppBar
@@ -115,10 +117,7 @@ const AppBar = () => {
             sx={{ cursor: "pointer" }}
             onClick={() => handleScrollToSection("Inicio")}
           >
-            <Avatar
-              src={isInitialPosition ? LogoWhite : LogoBlack}
-              sx={{ width: 150 }}
-            />
+            <Avatar src={logoSrc} sx={{ width: 150 }} />
           </Stack>
           <Box sx={{ flexGrow: 1 }} />
           <Box
