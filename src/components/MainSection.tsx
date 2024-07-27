@@ -38,7 +38,7 @@ const MainSection = () => {
           top: 0,
           left: 0,
           width: "100%",
-          minHeight: "110vh",
+          minHeight: "120vh",
           objectFit: "cover",
           zIndex: 1,
           backgroundImage: `url(${GradientBg})`,
@@ -54,7 +54,7 @@ const MainSection = () => {
         spacing={5}
         sx={{ position: "relative", zIndex: 3 }}
       >
-        <Grid item xs={12} md={6} xl={4}>
+        <Grid item xs={12} md={6}>
           <Stack spacing={2} p={2}>
             <AnimateWhileView>
               <CustomChip label="Asesoría Financiera" />
@@ -121,7 +121,7 @@ const MainSection = () => {
           </Stack>
         </Grid>
         <Hidden mdDown>
-          <Grid item md={6} xl={4}>
+          <Grid item md={6}>
             <ImageContainer
               src={MainImage}
               sx={{
